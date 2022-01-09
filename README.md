@@ -1,2 +1,1 @@
 # ReactNative Custom ImageSlider
-
