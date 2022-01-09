@@ -1,10 +1,11 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState} from 'react';
 import {View, ScrollView, Image, Dimensions} from 'react-native';
+
+import Styles from './styles';
 
 const ScrollViewImageSlider = props => {
   const {data} = props;
   const windowWidth = Dimensions.get('window').width;
-  const scrollRef = useRef();
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -24,7 +25,7 @@ const ScrollViewImageSlider = props => {
             source={{
               uri: item?.imgUrl,
             }}
-            style={{width: windowWidth, height: 250}}
+            style={Styles.imageContainer}
           />
         );
       })}
